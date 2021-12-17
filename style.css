@@ -11,7 +11,6 @@
 }
 
 body{
-    /* background-color: rgb(181, 38, 191); */
     background-image: linear-gradient(to bottom right, grey, white);
     height: 100%;
     width: 100%;
@@ -20,55 +19,113 @@ body{
 
 main{
     position: relative;
-    width: 55%;
+    width: 85%;
     background-color: white;
     height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    float: right;
     padding: 30px 5% 30px 5%;
     min-height: 100vh;
+    
 }
 
-header{
-
+aside{
+    width: 15%;
+    float: left;
+    position: relative;
 }
 
-nav{
-
+article{
+    margin-top: 30px;
 }
 
 h1{
     font-size: 2.2em;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 h2{
     font-size: 1.5em;
+    text-align: center;
 }
 
 p{
     font-family: 'Prata', serif;
     font-size: 1.2em;
+    line-height: 2;
 }
 
 a{
     text-decoration: none;
+    color: black
+}
+
+
+.listInARow{
+    text-align: center;
 }
 
 .listInARow li{
-    display: inline-block;
-    font-size: 1.6em;
+    font-size: 1.2em;
     padding: 20px;
+    list-style: none;
+    border: 3px solid black;
+    margin-bottom: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block
 }
 
-@media only screen and (max-device-width: 360px){
+.listInARow li:hover{
+    transition: 0.2s;
+    border: 5px solid darkgrey;
+    
+}
+
+.listInARow li:first-child{
+    margin-top: 20px
+}
+
+.textSection{
+    position: relative;
+    width: 50%;
+    float: left;
+}
+
+.photoSection{
+    position: relative;
+    width: 40%;
+    float: right;
+}
+
+.photoSection img{
+    height: auto;
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.projectSection a, .projectSection h1, .projectSection h2{
+    width: 90%;
+    text-align: left;
+}
+
+section.projectSection{
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 1100px){
     main{
         width: 100%;
     }
-}
-
-@media only screen and (max-device-width: 820px){
-    main{
-        width: 90%;
+    
+    aside{
+        width: 0;
+        visibility: none;
     }
+    
 }
