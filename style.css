@@ -14,6 +14,8 @@ body{
     background-image: white;
     height: 100%;
     width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 main{
@@ -22,16 +24,42 @@ main{
     background-color: white;
     height: 100%;
     float: right;
-    padding: 30px 5% 30px 5%;
+    padding: 20px 5% 20px 5%;
     min-height: 100vh;
     
 }
 
 aside{
-    width: 15%;
-    float: left;
     position: relative;
 }
+
+ul li{
+    margin-bottom: 10px;
+}
+
+.textSection{
+    position: relative;
+    width: 60%;
+    float: left;
+}
+
+.photoSection{
+    position: relative;
+    width: 40%;
+    float: left;
+}
+
+.photoSection img{
+    height: auto;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    
+}
+
+
 
 article{
     margin-top: 30px;
@@ -55,58 +83,9 @@ p{
 }
 
 a{
-    text-decoration: none;
     color: black
 }
 
-
-.listInARow{
-    text-align: center;
-}
-
-.listInARow li{
-    font-size: 1.2em;
-    padding: 10px;
-    list-style: none;
-    border: 3px solid black;
-    margin-bottom: 20px;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    background-color: #DDDDDD;
-}
-
-.listInARow li:hover{
-    transition: 0.25s;
-    background-color: white;
-}
-
-.listInARow li:first-child{
-    margin-top: 20px
-}
-
-.textSection{
-    position: relative;
-    width: 50%;
-    float: left;
-}
-
-.photoSection{
-    position: relative;
-    width: 40%;
-    float: right;
-}
-
-.photoSection img{
-    height: auto;
-    width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    margin-bottom: 50px;
-}
 
 .projectArticle a, .projectArticle h1, .projectArticle h2{
     width: 90%;
@@ -146,9 +125,12 @@ section.projectArticle{
         width: 100%;
     }
     
-    aside{
-        width: 0;
-        visibility: none;
+    body{
+        padding-left: 0;
+        padding-right: 0;
     }
     
+    ul li{
+        text-align: center;
+    }
 }
