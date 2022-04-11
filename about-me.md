@@ -13,6 +13,8 @@ I got into IT when I was 14 years old, when I started to learn C++.
 After graduating school, I decided to study at computer college. I had graduated college after 4 years of studying.
 Now I'm working as DevOps engineer in Odessa and studying at technical university.
 
+In this blog, mostly, I write articles. My blog is some kind of research center. Following Feynman technique, I'm trying to teach you in order to teach myself.
+
 I also have couple of pet pet-projects. You can check them out on my <a href="https://github.com/Artefall">Github</a>.
 
 Or you can check my [telegram blog](https://t.me/secretsupper), where I post interesting guides and educational.
