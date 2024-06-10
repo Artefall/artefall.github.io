@@ -1,0 +1,31 @@
+title: Church Mouse
+email: maximov.artyom007@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Personal blog of Artem Maksymov.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+github_username:  artefall
+linkedin_username: artyom-maximov
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+permalink: /:categories/:title:output_ext
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - notes/
