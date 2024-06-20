@@ -145,7 +145,7 @@ projects:
         tagline: "Browser application I have done together with my teacher in scope of nodejs practice."
 
       - title: docker-nginx-load-balancer-devops-test-assignment
-        link: "https://github.com/Artefall/https://github.com/Artefall/docker-nginx-load-balancer-devops-test-assignment"
+        link: "https://github.com/Artefall/docker-nginx-load-balancer-devops-test-assignment"
         tagline: "Test assignment I have done for my first job interview."
 
       - title: terraform-aws-vpn-collection
