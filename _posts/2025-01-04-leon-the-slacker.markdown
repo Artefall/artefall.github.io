@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A slacker"
+title:  "Leon the slacker"
 date:   2025-01-04
 categories: nonsense
 ---
@@ -8,7 +8,7 @@ categories: nonsense
 **VIEWERS DISCRETION IS ADVICED: This novel is just a giant self-insert**
 
 
-Leon sits at the couch in front of the window of the living room. The day has came to the end, so only few **sunbeams** slide into apartment, **highligting** a teapot with a second **infusion** of chineese tea.
+Leon sits at the couch in front of the window of the living room. The day has came to the end, so only few sunbeams slide into apartment, highligting a teapot with a second **infusion** of chineese tea.
 
 \*Bottoms up\*. He fills an empty cup gently and starts drinking tea looking trhough the window. 
 
