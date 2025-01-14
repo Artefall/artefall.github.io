@@ -35,10 +35,10 @@ Leon opens the door. The woman has been standing in front of the opened door. Sh
 
 Leon is standing, unable to say anything. He is not able to refuse. He concedes and nods his head.
 
-- "Come in. Just so you know, you act absolutely terr..."
-- "Thanks, " lady goes to the living room. She put her purse on the kitchen table.
+"Come in. Just so you know, you act absolutely terr..."<br>
+"Thanks, " lady goes to the living room. She put her purse on the kitchen table.<br>
 
-- "What a stench here? Why everything is so dirty? And you hair is so greasy! Solitude doesn't affect you well".
+"What a stench here? Why everything is so dirty? And you hair is so greasy! Solitude doesn't affect you well".
 
 Leon have lost any sense of answering her ridicules and pricks. He decides to go back on the sofa to proceed doing what he has been doing earlier. 
 
