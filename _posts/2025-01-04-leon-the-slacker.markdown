@@ -106,4 +106,4 @@ Suddenly the multicooker have rung in a kitchen.
 
 Leon served plates with food for everyone. They begin to eat diligently.
 
-![Image](./images/under_construction.jpg)
+![image](/images/uc.jpg)
