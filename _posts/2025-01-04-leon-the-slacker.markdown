@@ -74,3 +74,36 @@ seen her!"<br>
 "You are so generous," Emily add.
 
 Leon turns back to sofa. He looks very tired in reflection of the window. Just later he realizes that Emily have no eybrows at all. They were shaved for some reason, but he don't feel the need to ask why.
+
+Hours passes. Leon stands by the window and smokes. 
+
+"What a handsome man. Leon, have you ever been told the way you smoke looks so-o-o sexy."<br>
+
+Both ladies looked at him and giggled. 
+
+He smokes every puff slowly but gridly. Trying to fill his lungs up with all this smoke. 
+
+"Your moody face, noded head and posture make you look like a western cowboy who have secret".
+
+"Have you ever tried to be kind or merciful? Are you aware of these words?", Leon put out the cigarete. Ashes have flown away, "I've been so emotionally drained this period and you know this. Why do you want to humiliate me?"<br>
+"And when have you become such a pussy? Come on! Where is old Leon you used to be? I have never ever seen you in a mood like this. You used to be like that only to the end of the party while hangover, but now it's just ubearable! Whenever someone ask you to come out or to have fun - you throw some miserable justification just not to go with us so you can bury yourself in this coffin you call "home".<br>
+"Because I'm tired to live like this. It's sensless to live like that."<br>
+"Like what?"<br>
+
+Leon casts a brief look on the tray whith a white powder on it, at the kitchen table.
+
+"All this endless fun and parties."<br>
+"What's bad in fun and parties? We are alive and we'll have party till the end of the life. Is there any sense in life if there is no party?"<br>
+"I don't know. But if I feel absolutly devestated after every party. The more stuff I throw to myself, the more sensless life seems to be after a hangover. If this peak of satisifaction turns to be the worst nightmare ever, is there anything in life that does really make sense? To spend a week in a hot bath, hugging yourself, bursted out of tears after a day of *awesome* party..."<br>
+
+Everybody get silent for a minute...
+
+Suddenly the multicooker have rung in a kitchen. 
+
+"Do you want some rice and chicken?"<br>
+"Yesh".<br>
+"Definitely".<br>
+
+Leon served plates with food for everyone. They begin to eat diligently.
+
+![Image](./images/under_construction.jpg)
