@@ -16,9 +16,7 @@
 
 "I'm leaving this place in september. You won't see me here anymore"
 
-
-**I quit smoking.**
-
 "You always say that human being is just a flesh automaton animated by neurotransmitters. So what happened? "
 
-"Or you want to know how I felt after every hangover? "
+
+She has been betraying me for all my life! And I've been always forgiving her nevertheless what! And you says that I have no mercy? 

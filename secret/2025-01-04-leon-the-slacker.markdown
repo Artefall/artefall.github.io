@@ -5,9 +5,6 @@ date:   2025-01-04
 categories: nonsense
 ---
 
-**VIEWERS DISCRETION IS ADVICED: This novel is just a giant self-insert**
-
-
 Leon sits at the couch in front of the window of the living room. The day has came to the end. Few sunbeams slide into apartment, highligting a teapot with a second infusion of chineese tea.
 
 \*Bottoms up\*. He fills an empty cup gently and starts drinking tea looking trhough the window. 
@@ -106,6 +103,6 @@ Suddenly the multicooker have rung in a kitchen.
 
 Leon served plates with food for everyone. They begin to eat diligently.
 
-She has been betrayed me for all my life! And I've been always forgiving her nevertheless what! And you says that I have no mercy? 
+It is 1AM.
 
-![image](/images/uc.jpg)
+![under construction](/images/uc.jpg)
