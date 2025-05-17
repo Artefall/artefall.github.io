@@ -1,81 +1,75 @@
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: Georgia, serif;
+  background: #fefefe;
+  color: #2d2d2d;
+  line-height: 1.7;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f0f2f5;
-  color: #333;
-  line-height: 1.6;
-  padding: 30px 15px;
+.bio-container {
+  max-width: 960px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
-.container {
-  max-width: 800px;
-  margin: auto;
-  background: #fff;
-  padding: 40px;
+.bio-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bio-photo {
+  max-width: 250px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.profile-photo {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #007acc;
-  margin-bottom: 15px;
-}
-
-.subtitle {
-  color: #666;
-  font-size: 1rem;
-}
-
-h2 {
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 5px;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  color: #007acc;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 10px;
-}
-
-ul li {
-  margin-bottom: 8px;
-}
-
-.job {
   margin-bottom: 20px;
 }
 
-.job h3 {
-  margin-bottom: 4px;
+.bio-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #003366;
 }
 
-.date {
-  color: #999;
-  font-size: 0.9rem;
+.bio-text p {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
 }
 
-a {
+.contact-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.contact-links li {
+  margin-bottom: 8px;
+}
+
+.contact-links a {
   color: #007acc;
   text-decoration: none;
 }
 
-a:hover {
+.contact-links a:hover {
   text-decoration: underline;
+}
+
+/* Responsive: photo left, text right */
+@media (min-width: 768px) {
+  .bio-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .bio-photo {
+    flex-shrink: 0;
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+
+  .bio-text {
+    flex: 1;
+  }
 }
