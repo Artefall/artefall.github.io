@@ -34,48 +34,80 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    .page {
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 0 24px;
+    /* ══════════════════════════════
+       HERO — fullscreen photo
+    ══════════════════════════════ */
+    .hero {
+      position: relative;
+      height: 100svh;
+      min-height: 560px;
+      max-height: 860px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
     }
 
-    /* ── HERO ── */
-    .hero {
-      padding: 64px 0 44px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 32px;
-      align-items: start;
-      animation: fadeUp .5s ease both;
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('photos/tools-milwaukee.jpg');
+      background-size: cover;
+      background-position: center 20%;
+      transform: scale(1.03);
+      transition: transform 8s ease;
+    }
+
+    .hero:hover .hero-bg { transform: scale(1); }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(10,14,18,0.88) 0%,
+        rgba(10,14,18,0.45) 45%,
+        rgba(10,14,18,0.10) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 40px 52px;
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      animation: fadeUp .7s ease both;
+    }
+
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.55);
+      margin-bottom: 12px;
     }
 
     .hero-name {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(52px, 10vw, 80px);
+      font-size: clamp(56px, 11vw, 96px);
       font-weight: 800;
-      line-height: .95;
-      color: var(--text);
+      line-height: .92;
+      color: #fff;
       letter-spacing: -.02em;
-      margin-bottom: 16px;
-    }
-
-    .hero-title {
-      font-size: 17px;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 8px;
+      margin-bottom: 18px;
     }
 
     .hero-sub {
-      font-size: 15px;
-      color: var(--muted);
-      max-width: 440px;
+      font-size: 16px;
+      color: rgba(255,255,255,.7);
+      max-width: 460px;
       line-height: 1.6;
+      margin-bottom: 28px;
     }
 
     .hero-cta {
-      margin-top: 28px;
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
@@ -88,44 +120,68 @@
       text-decoration: none;
       font-size: 14px;
       font-weight: 600;
-      padding: 11px 20px;
+      padding: 12px 22px;
       border-radius: 6px;
       transition: opacity .15s;
     }
     .btn-primary:hover { opacity: .85; }
 
-    .btn-secondary {
+    .btn-ghost {
       display: inline-block;
-      background: transparent;
-      color: var(--text);
+      background: rgba(255,255,255,.12);
+      color: #fff;
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
-      padding: 11px 20px;
+      padding: 12px 22px;
       border-radius: 6px;
-      border: 1.5px solid var(--border);
-      transition: border-color .15s;
+      border: 1.5px solid rgba(255,255,255,.25);
+      backdrop-filter: blur(4px);
+      transition: background .15s;
     }
-    .btn-secondary:hover { border-color: #aaa; }
+    .btn-ghost:hover { background: rgba(255,255,255,.2); }
 
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 12px;
-      object-fit: cover;
-      display: block;
-      border: 2px solid var(--border);
-      flex-shrink: 0;
+    /* scroll hint */
+    .scroll-hint {
+      position: absolute;
+      bottom: 20px;
+      right: 40px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,.35);
+      font-size: 11px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
     }
 
-    /* ── CERT STRIP ── */
+    .scroll-hint-line {
+      width: 1px;
+      height: 36px;
+      background: rgba(255,255,255,.25);
+      animation: scrollPulse 2s ease infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: .3; transform: scaleY(1); }
+      50% { opacity: .8; transform: scaleY(.6); }
+    }
+
+    /* ══════════════════════════════
+       CERT STRIP
+    ══════════════════════════════ */
     .cert-strip {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      padding: 0 0 40px;
-      animation: fadeUp .5s .08s ease both;
+      padding: 32px 0 0;
+      max-width: 820px;
+      margin: 0 auto;
     }
+
+    .page { max-width: 820px; margin: 0 auto; padding: 0 24px; }
 
     .cert-badge {
       display: flex;
@@ -157,16 +213,12 @@
       color: #3A7A58;
     }
 
-    /* ── DIVIDER ── */
-    .divider { height: 1px; background: var(--border); }
-
-    /* ── SECTION ── */
-    section {
-      padding: 44px 0;
-      animation: fadeUp .5s .15s ease both;
+    /* ══════════════════════════════
+       PHOTO GALLERY
+    ══════════════════════════════ */
+    .gallery-section {
+      padding: 48px 0 0;
     }
-
-    section + section { border-top: 1px solid var(--border); }
 
     .section-label {
       font-size: 11px;
@@ -174,10 +226,51 @@
       letter-spacing: .18em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
 
-    /* ── SKILLS GRID ── */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 220px 220px;
+      gap: 8px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 8px;
+      background: #ddd;
+    }
+
+    .gallery-item:first-child {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .4s ease;
+    }
+
+    .gallery-item:hover img { transform: scale(1.04); }
+
+    /* ══════════════════════════════
+       DIVIDER
+    ══════════════════════════════ */
+    .divider { height: 1px; background: var(--border); margin-top: 48px; }
+
+    /* ══════════════════════════════
+       SECTIONS
+    ══════════════════════════════ */
+    section { padding: 44px 0; }
+    section + section { border-top: 1px solid var(--border); }
+
+    /* ══════════════════════════════
+       SKILLS GRID
+    ══════════════════════════════ */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
@@ -212,7 +305,9 @@
       line-height: 1.55;
     }
 
-    /* ── EXPERIENCE ── */
+    /* ══════════════════════════════
+       EXPERIENCE
+    ══════════════════════════════ */
     .exp-list { display: flex; flex-direction: column; }
 
     .exp-item {
@@ -225,18 +320,8 @@
 
     .exp-item:last-child { border-bottom: none; }
 
-    .exp-period {
-      font-size: 12px;
-      color: var(--muted);
-      padding-top: 3px;
-      line-height: 1.4;
-    }
-
-    .exp-company {
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 4px;
-    }
+    .exp-period { font-size: 12px; color: var(--muted); padding-top: 3px; line-height: 1.4; }
+    .exp-company { font-size: 12px; color: var(--muted); margin-top: 4px; }
 
     .exp-title {
       font-family: 'Barlow Condensed', sans-serif;
@@ -247,12 +332,7 @@
       margin-bottom: 10px;
     }
 
-    .exp-bullets {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 6px; }
 
     .exp-bullets li {
       font-size: 14px;
@@ -280,12 +360,10 @@
       border-radius: 4px;
     }
 
-    /* ── TOOLS LIST ── */
-    .tools-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    /* ══════════════════════════════
+       TOOLS
+    ══════════════════════════════ */
+    .tools-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
 
     .tool-pill {
       font-size: 13px;
@@ -297,17 +375,9 @@
       padding: 5px 14px;
     }
 
-    /* ── ABOUT ── */
-    .about-text {
-      font-size: 16px;
-      color: var(--text);
-      line-height: 1.75;
-      max-width: 620px;
-    }
-
-    .about-text p + p { margin-top: 14px; }
-
-    /* ── EXTRAS ROW ── */
+    /* ══════════════════════════════
+       EXTRAS
+    ══════════════════════════════ */
     .extras-row {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -337,7 +407,9 @@
       line-height: 1.5;
     }
 
-    /* ── CONTACT ── */
+    /* ══════════════════════════════
+       CONTACT
+    ══════════════════════════════ */
     .contact-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -375,7 +447,9 @@
       word-break: break-all;
     }
 
-    /* ── FOOTER ── */
+    /* ══════════════════════════════
+       FOOTER
+    ══════════════════════════════ */
     footer {
       border-top: 1px solid var(--border);
       padding: 28px 0 44px;
@@ -386,19 +460,29 @@
       color: var(--muted);
     }
 
-    /* ── ANIMATION ── */
+    /* ══════════════════════════════
+       ANIMATION
+    ══════════════════════════════ */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(14px); }
+      from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 580px) {
-      .hero { grid-template-columns: 1fr; padding: 44px 0 32px; }
-      .avatar { width: 84px; height: 84px; border-radius: 8px; }
+    /* ══════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════ */
+    @media (max-width: 600px) {
+      .hero { max-height: 700px; }
+      .hero-content { padding: 0 20px 40px; }
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 160px 160px 160px;
+      }
+      .gallery-item:first-child { grid-column: 1 / 3; }
       .exp-item { grid-template-columns: 1fr; }
       .exp-period { margin-bottom: 6px; }
       footer { flex-direction: column; gap: 6px; text-align: center; }
+      .scroll-hint { display: none; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -406,240 +490,274 @@
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
       }
+      .hero-bg { transform: none !important; }
     }
   </style>
 </head>
 <body>
-<div class="page">
 
-  <!-- HERO -->
+  <!-- ── HERO ── -->
   <div class="hero">
-    <div>
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Pittsburgh, PA · Available for Work</div>
       <div class="hero-name">Tom<br/>Maksymov</div>
-      <div class="hero-title">Technical Trades Specialist · Pittsburgh, PA</div>
-      <div class="hero-sub">Certified welder, solar installer, and field tech with an IT background. I work on rooftops, in crawl spaces, and anywhere the job takes me — reliably and without hand-holding.</div>
+      <div class="hero-sub">Certified Tradesman | Welding • HVAC • Electrical • Plumbing | With a background in IT and automation.</div>
       <div class="hero-cta">
-        <a href="https://artefall.github.io/TomMaksymovResumeTechnicalTradesman.pdf" target="_blank" rel="noopener" class="btn-primary">⬇ Download Resume</a>
-        <a href="mailto:maximov.artyom007@gmail.com" class="btn-secondary">Get in touch</a>
-        <a href="https://www.linkedin.com/in/maksymov-artem/" target="_blank" rel="noopener" class="btn-secondary">LinkedIn</a>
+        <a href="https://artefall.github.io/resume.pdf" target="_blank" rel="noopener" class="btn-primary">⬇ Download Resume</a>
+        <a href="mailto:maximov.artyom007@gmail.com" class="btn-ghost">Get in touch</a>
+        <a href="https://www.linkedin.com/in/maksymov-artem/" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
       </div>
     </div>
-    <img class="avatar" src="https://artefall.github.io/me.jpg" alt="Tom Maksymov" />
-  </div>
-
-  <!-- CERT STRIP -->
-  <div class="cert-strip">
-    <div class="cert-badge">
-      <div class="cert-dot"></div>
-      <div class="cert-badge-text">
-        <strong>EPA 608 Universal</strong>
-        <span>HVACR · Skillcat, 2025</span>
-      </div>
-    </div>
-    <div class="cert-badge">
-      <div class="cert-dot"></div>
-      <div class="cert-badge-text">
-        <strong>OSHA-10</strong>
-        <span>360 Training, 2026</span>
-      </div>
-    </div>
-    <div class="cert-badge">
-      <div class="cert-dot"></div>
-      <div class="cert-badge-text">
-        <strong>AWS D1.1</strong>
-        <span>Structural Welding · AWS, 2024</span>
-      </div>
-    </div>
-    <div class="cert-badge">
-      <div class="cert-dot"></div>
-      <div class="cert-badge-text">
-        <strong>Driver's License</strong>
-        <span>PennDOT, 2024</span>
-      </div>
+    <div class="scroll-hint">
+      <div class="scroll-hint-line"></div>
     </div>
   </div>
 
-  <div class="divider"></div>
+  <div class="page">
 
-  <!-- WHAT I DO -->
-  <section>
-    <div class="section-label">What I bring to the job</div>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-card-icon">❄️</div>
-        <div class="skill-card-title">HVACR & Refrigeration</div>
-        <div class="skill-card-desc">EPA 608 Universal certified. Refrigeration systems, HVAC service, brazing, and diagnostics in residential and commercial settings.</div>
+    <!-- ── CERTS ── -->
+    <div class="cert-strip">
+      <div class="cert-badge">
+        <div class="cert-dot"></div>
+        <div class="cert-badge-text">
+          <strong>EPA 608 Universal</strong>
+          <span>HVACR · Skillcat, 2025</span>
+        </div>
       </div>
-      <div class="skill-card">
-        <div class="skill-card-icon">⚡</div>
-        <div class="skill-card-title">Electrical & Solar</div>
-        <div class="skill-card-desc">DC wiring, solar module installation, junction boxes, grounding, conduit pathways — rooftop work on residential arrays.</div>
+      <div class="cert-badge">
+        <div class="cert-dot"></div>
+        <div class="cert-badge-text">
+          <strong>OSHA-10</strong>
+          <span>360 Training, 2026</span>
+        </div>
       </div>
-      <div class="skill-card">
-        <div class="skill-card-icon">🔧</div>
-        <div class="skill-card-title">Welding & Fabrication</div>
-        <div class="skill-card-desc">MIG welding, structural steel to D1.1 code, aluminum frames, oxy-fuel cutting, brazing, and soldering.</div>
+      <div class="cert-badge">
+        <div class="cert-dot"></div>
+        <div class="cert-badge-text">
+          <strong>AWS D1.1</strong>
+          <span>Structural Welding · 2024</span>
+        </div>
       </div>
-      <div class="skill-card">
-        <div class="skill-card-icon">🚿</div>
-        <div class="skill-card-title">Plumbing</div>
-        <div class="skill-card-desc">Maintenance plumbing in residential and commercial environments — coursework and hands-on practice.</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card-icon">🏗️</div>
-        <div class="skill-card-title">Field Installation</div>
-        <div class="skill-card-desc">Structural and mechanical assembly, blueprint reading, rooftop and outdoor sites, residential and commercial.</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card-icon">💻</div>
-        <div class="skill-card-title">Technical Troubleshooting</div>
-        <div class="skill-card-desc">3 years as a DevOps engineer at international companies. Systematic root-cause thinking that carries directly into field work.</div>
+      <div class="cert-badge">
+        <div class="cert-dot"></div>
+        <div class="cert-badge-text">
+          <strong>Driver's License</strong>
+          <span>PennDOT, 2024</span>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- EXPERIENCE -->
-  <section>
-    <div class="section-label">Experience</div>
-    <div class="exp-list">
-
-      <div class="exp-item">
-        <div class="exp-meta">
-          <div class="exp-period">12/2025 – 06/2026</div>
-          <div class="exp-company">Trinity Solar<br/>Pittsburgh, PA</div>
+    <!-- ── GALLERY ── -->
+    <div class="gallery-section">
+      <div class="section-label">On the job</div>
+      <div class="gallery-grid">
+        <!-- Wide: rooftop harness shot — most impactful -->
+        <div class="gallery-item">
+          <img src="photos/epa.jpg" alt="Tom work with gauge manifold" />
         </div>
-        <div>
-          <div class="exp-title">Solar Installer</div>
-          <ul class="exp-bullets">
-            <li>Structural and electrical layout of residential solar arrays per engineered blueprints and local codes.</li>
-            <li>DC wiring — solar modules, junction boxes, grounding, and containment pathways.</li>
-            <li>Rooftop work in challenging weather; ladder and height safety per OSHA-10 standards.</li>
-            <li>Coordinated with site foremen and homeowners to hit project milestones on schedule.</li>
-          </ul>
+        <!-- Right column top: solar panels selfie -->
+        <div class="gallery-item">
+          <img src="photos/solar-selfie.jpg" alt="Tom with installed solar panels on roof" />
         </div>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-meta">
-          <div class="exp-period">03/2025 – 12/2025</div>
-          <div class="exp-company">Neilly Canvas Goods<br/>Pittsburgh, PA</div>
+        <!-- Bottom left: rooftop full body harness -->
+        <div class="gallery-item">
+          <img src="photos/me-electric.jpg" alt="Tom on roof in safety harness" />
         </div>
-        <div>
-          <div class="exp-title">Field Technician & Fabricator</div>
-          <ul class="exp-bullets">
-            <li>Installed and dismantled custom metal-framed awning systems on residential and commercial sites.</li>
-            <li>MIG welding on aluminum frames; fabrication and assembly with power and hand tools.</li>
-            <li>Read blueprints and schematics; troubleshot installation issues on-site.</li>
-            <li>Basic repair of electrical components and small appliances.</li>
-          </ul>
+        <!-- Bottom middle: Milwaukee tools -->
+        <div class="gallery-item">
+          <img src="photos/sewer-machine.jpg" alt="Tools laid out on rooftop" />
         </div>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-meta">
-          <div class="exp-period">2024 – 2026</div>
-          <div class="exp-company">CCAC</div>
+        <!-- Bottom right: tools on roof -->
+        <div class="gallery-item">
+          <img src="photos/me-painter.jpg" alt="Milwaukee tools on job site" />
         </div>
-        <div>
-          <div class="exp-title">Welding Technology · Maintenance, Plumbing, Wiring & Refrigeration</div>
-          <ul class="exp-bullets">
-            <li>Structural welding to AWS D1.1 code standards.</li>
-            <li>Maintenance plumbing, electrical wiring, and HVACR refrigeration systems.</li>
-          </ul>
-          <span class="exp-tag">EPA 608 · OSHA-10 · AWS D1.1</span>
-        </div>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-meta">
-          <div class="exp-period">01/2021 – 02/2024</div>
-          <div class="exp-company">Genesys · Bazaarvoice<br/>ABN AMRO · others</div>
-        </div>
-        <div>
-          <div class="exp-title">DevOps Engineer & Infrastructure Specialist</div>
-          <ul class="exp-bullets">
-            <li>Technical troubleshooting, systems logic, and infrastructure design for international enterprises.</li>
-            <li>Built local IT infrastructure: server hardware, network config, routers, switches, cable management.</li>
-          </ul>
-          <span class="exp-tag">Google Cloud · AWS SysOps · AWS CCP</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- TOOLS & SKILLS -->
-  <section>
-    <div class="section-label">Tools & Skills</div>
-    <div class="tools-wrap">
-      <span class="tool-pill">Electrical wiring & controls</span>
-      <span class="tool-pill">HVACR & Refrigeration</span>
-      <span class="tool-pill">Plumbing</span>
-      <span class="tool-pill">Welding & fabrication</span>
-      <span class="tool-pill">Brazing & soldering</span>
-      <span class="tool-pill">Oxy-fuel cutting</span>
-      <span class="tool-pill">Blueprint & schematic reading</span>
-      <span class="tool-pill">Power & hand tools</span>
-      <span class="tool-pill">Equipment installation & repair</span>
-      <span class="tool-pill">Mechanical troubleshooting</span>
-      <span class="tool-pill">Rooftop & ladder safety</span>
-      <span class="tool-pill">Shop math</span>
-      <span class="tool-pill">Technical documentation</span>
-      <span class="tool-pill">Customer communication</span>
-    </div>
-  </section>
-
-  <!-- EXTRAS -->
-  <section>
-    <div class="section-label">Additional</div>
-    <div class="extras-row">
-      <div class="extra-card">
-        <div class="extra-card-label">Languages</div>
-        <div class="extra-card-value">English · Russian<br/>Ukrainian · Spanish</div>
-      </div>
-      <div class="extra-card">
-        <div class="extra-card-label">Authorization</div>
-        <div class="extra-card-value">U.S. Employment<br/>Authorized</div>
-      </div>
-      <div class="extra-card">
-        <div class="extra-card-label">Transportation</div>
-        <div class="extra-card-value">Valid Driver's License<br/>Own vehicle</div>
-      </div>
-      <div class="extra-card">
-        <div class="extra-card-label">Physical</div>
-        <div class="extra-card-value">Can lift 50 lbs+<br/>Rooftop & outdoor work</div>
       </div>
     </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section>
-    <div class="section-label">Get in touch</div>
-    <div class="contact-grid">
-      <a href="mailto:maximov.artyom007@gmail.com" class="contact-card">
-        <div class="contact-card-label">Email</div>
-        <div class="contact-card-value">maximov.artyom007@gmail.com</div>
-      </a>
-      <a href="tel:4125003575" class="contact-card">
-        <div class="contact-card-label">Phone</div>
-        <div class="contact-card-value">412-500-3575</div>
-      </a>
-      <a href="https://t.me/artefall" target="_blank" rel="noopener" class="contact-card">
-        <div class="contact-card-label">Telegram</div>
-        <div class="contact-card-value">@artefall</div>
-      </a>
-      <a href="https://www.linkedin.com/in/maksymov-artem/" target="_blank" rel="noopener" class="contact-card">
-        <div class="contact-card-label">LinkedIn</div>
-        <div class="contact-card-value">linkedin.com/in/maksymov-artem</div>
-      </a>
-    </div>
-  </section>
+    <div class="divider"></div>
 
-  <footer>
-    <span>Tom Maksymov · Pittsburgh, PA</span>
-    <span>Open to full-time & contract work</span>
-  </footer>
+    <!-- ── WHAT I DO ── -->
+    <section>
+      <div class="section-label">What I bring to the job</div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-card-icon">❄️</div>
+          <div class="skill-card-title">HVACR & Refrigeration</div>
+          <div class="skill-card-desc">EPA 608 Universal certified. Refrigeration systems, HVAC service, brazing, and diagnostics in residential and commercial settings.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-icon">⚡</div>
+          <div class="skill-card-title">Electrical & Solar</div>
+          <div class="skill-card-desc">DC wiring, solar module installation, junction boxes, grounding, conduit pathways — rooftop work on residential arrays.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-icon">🔥</div>
+          <div class="skill-card-title">Welding & Fabrication</div>
+          <div class="skill-card-desc">MIG welding, structural steel to D1.1 code, aluminum frames, oxy-fuel cutting, brazing, and soldering.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-icon">🚿</div>
+          <div class="skill-card-title">Plumbing</div>
+          <div class="skill-card-desc">Maintenance plumbing in residential and commercial environments — coursework and hands-on practice.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-icon">🏗️</div>
+          <div class="skill-card-title">Field Installation</div>
+          <div class="skill-card-desc">Structural and mechanical assembly, blueprint reading, rooftop and outdoor sites, residential and commercial.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-icon">💻</div>
+          <div class="skill-card-title">Technical Troubleshooting</div>
+          <div class="skill-card-desc">3 years as a DevOps engineer at international companies. Systematic root-cause thinking that carries directly into field work.</div>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <!-- ── EXPERIENCE ── -->
+    <section>
+      <div class="section-label">Experience</div>
+      <div class="exp-list">
+
+        <div class="exp-item">
+          <div>
+            <div class="exp-period">12/2025 – 06/2026</div>
+            <div class="exp-company">Trinity Solar<br/>Pittsburgh, PA</div>
+          </div>
+          <div>
+            <div class="exp-title">Solar Installer</div>
+            <ul class="exp-bullets">
+              <li>Structural and electrical layout of residential solar arrays per engineered blueprints and local codes.</li>
+              <li>DC wiring — solar modules, junction boxes, grounding, and containment pathways.</li>
+              <li>Rooftop work in challenging weather; ladder and height safety per OSHA-10 standards.</li>
+              <li>Coordinated with site foremen and homeowners to hit project milestones on schedule.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div>
+            <div class="exp-period">03/2025 – 12/2025</div>
+            <div class="exp-company">Neilly Canvas Goods<br/>Pittsburgh, PA</div>
+          </div>
+          <div>
+            <div class="exp-title">Field Technician & Fabricator</div>
+            <ul class="exp-bullets">
+              <li>Installed and dismantled custom metal-framed awning systems on residential and commercial sites.</li>
+              <li>MIG welding on aluminum frames; fabrication and assembly with power and hand tools.</li>
+              <li>Read blueprints and schematics; troubleshot installation issues on-site.</li>
+              <li>Basic repair of electrical components and small appliances.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div>
+            <div class="exp-period">2024 – 2026</div>
+            <div class="exp-company">CCAC</div>
+          </div>
+          <div>
+            <div class="exp-title">Welding · Plumbing · Wiring · Refrigeration</div>
+            <ul class="exp-bullets">
+              <li>Structural welding to AWS D1.1 code standards.</li>
+              <li>Maintenance plumbing, electrical wiring, and HVACR refrigeration systems.</li>
+            </ul>
+            <span class="exp-tag">EPA 608 · OSHA-10 · AWS D1.1</span>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div>
+            <div class="exp-period">01/2021 – 02/2024</div>
+            <div class="exp-company">Genesys · Bazaarvoice<br/>ABN AMRO · others</div>
+          </div>
+          <div>
+            <div class="exp-title">DevOps Engineer & Infrastructure Specialist</div>
+            <ul class="exp-bullets">
+              <li>Technical troubleshooting, systems logic, and infrastructure design for international enterprises.</li>
+              <li>Built local IT infrastructure: server hardware, network config, routers, switches, cable management.</li>
+            </ul>
+            <span class="exp-tag">Google Cloud · AWS SysOps · AWS CCP</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── TOOLS ── -->
+    <section>
+      <div class="section-label">Tools & Skills</div>
+      <div class="tools-wrap">
+        <span class="tool-pill">Electrical wiring & controls</span>
+        <span class="tool-pill">HVACR & Refrigeration</span>
+        <span class="tool-pill">Plumbing</span>
+        <span class="tool-pill">Welding & fabrication</span>
+        <span class="tool-pill">Brazing & soldering</span>
+        <span class="tool-pill">Oxy-fuel cutting</span>
+        <span class="tool-pill">Blueprint & schematic reading</span>
+        <span class="tool-pill">Power & hand tools</span>
+        <span class="tool-pill">Equipment installation & repair</span>
+        <span class="tool-pill">Mechanical troubleshooting</span>
+        <span class="tool-pill">Rooftop & ladder safety</span>
+        <span class="tool-pill">Shop math</span>
+        <span class="tool-pill">Technical documentation</span>
+        <span class="tool-pill">Customer communication</span>
+      </div>
+    </section>
+
+    <!-- ── EXTRAS ── -->
+    <section>
+      <div class="section-label">Additional</div>
+      <div class="extras-row">
+        <div class="extra-card">
+          <div class="extra-card-label">Languages</div>
+          <div class="extra-card-value">English · Russian<br/>Ukrainian · Spanish</div>
+        </div>
+        <div class="extra-card">
+          <div class="extra-card-label">Authorization</div>
+          <div class="extra-card-value">U.S. Employment<br/>Authorized</div>
+        </div>
+        <div class="extra-card">
+          <div class="extra-card-label">Transportation</div>
+          <div class="extra-card-value">Valid Driver's License<br/>Own vehicle</div>
+        </div>
+        <div class="extra-card">
+          <div class="extra-card-label">Physical</div>
+          <div class="extra-card-value">Can lift 50 lbs+<br/>Rooftop & outdoor work</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <section>
+      <div class="section-label">Get in touch</div>
+      <div class="contact-grid">
+        <a href="mailto:maximov.artyom007@gmail.com" class="contact-card">
+          <div class="contact-card-label">Email</div>
+          <div class="contact-card-value">maximov.artyom007@gmail.com</div>
+        </a>
+        <a href="tel:4125003575" class="contact-card">
+          <div class="contact-card-label">Phone</div>
+          <div class="contact-card-value">412-500-3575</div>
+        </a>
+        <a href="https://t.me/artefall" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-card-label">Telegram</div>
+          <div class="contact-card-value">@artefall</div>
+        </a>
+        <a href="https://www.linkedin.com/in/maksymov-artem/" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-card-label">LinkedIn</div>
+          <div class="contact-card-value">linkedin.com/in/maksymov-artem</div>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <span>Tom Maksymov · Pittsburgh, PA</span>
+      <span>Open to full-time & contract work</span>
+    </footer>
+
+  </div><!-- /page -->
+
 </body>
 </html>
